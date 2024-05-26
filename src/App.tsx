@@ -1,23 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GameStart from './components/GameStart';
+import {Card} from './components/Card';
 
 function App() {
+
+  const card = {
+    illustration: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghBpX3a6ElnHnjyyjcdWzhVYpsrNbb5q1JxQe2vzy5CdBy1cXc1LpFhQm6qydZHJcTd4J_IVYob5azYtikXSLdyQFkU0gOy7YBGMjfL51_IJzuX2AiVaqBWBIKMvMwVj2PPUZLhU_UoVWn/s400/penguin15_cape.png",
+    opened: false
+  
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Card illustration={card.illustration} opened={card.opened}  />
       </header>
     </div>
   );
